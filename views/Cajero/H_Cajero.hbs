@@ -1,0 +1,44 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{title}}</title>
+    <link href="/Assets/css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body class="bg-light">
+
+    <div class="container mt-5 justify-content-center">
+      <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+          <h4 class="mb-0">Cajero Automático</h4>
+        </div>
+        <div class="card-body">
+          <form action="/" method="post">
+            <div class="mb-3">
+              <label for="monto" class="form-label">Monto a retirar:</label>
+              <input
+                type="number"
+                class="form-control"
+                step="any"
+                id="monto"
+                placeholder="Ingrese un monto a desembolsar"
+                required="required"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="Modo" class="form-label">Tipo de Disperción:</label>
+              <select class="form-select" id="Modo" required="required">
+                <option value="Modo_E">Retiro eficiente</option>
+                <option value="Modo_1">Papeletas de 100 y 500</option>
+                <option value="Modo_2">Papeletas de 200 y 1000</option>
+
+              </select>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Retirar Efectivo</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="/Assets/js/bootstrap.min.js"></script>
+    <script src="/Assets/js/Cajero/Cajero.js"></script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{title}}</title>
+    <link href="/Assets/css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body class="bg-light">
+
+    <div class="container mt-5">
+      <div class="card mx-auto shadow-sm" style="max-width: 400px;">
+        <div class="card-header text-center bg-primary text-white">
+          <h5 class="mb-0"> Cajero Automático</h5>
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush small">
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Fecha:</span><span>01/07/2025</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Hora:</span><span>22:15</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Cuenta:</span><span>Ahorros</span>
+            </li>
+            <li
+              class="list-group-item border-top d-flex justify-content-between fw-bold"
+            >
+              <span>Billetes de $1000:</span><span>2</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between fw-bold">
+              <span>Billetes de $500:</span><span>1</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between fw-bold">
+              <span>Billetes de $200:</span><span>0</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between fw-bold">
+              <span>Billetes de $100:</span><span>1</span>
+            </li>
+            <li
+              class="list-group-item border-top d-flex justify-content-between text-success"
+            >
+              <span>Total retirado:</span><span>$2600</span>
+            </li>
+          </ul>
+          <div class="d-flex justify-content-end">
+            <button
+              class="btn btn-outline-success"
+              onclick="reiniciar()"
+            >Realizar un nuevo retiro</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
