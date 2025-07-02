@@ -1,0 +1,54 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{title}}</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body class="bg-light">
+
+    <div class="container mt-5 justify-content-center">
+      <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+          <h4 class="mb-0">Cajero Automático</h4>
+        </div>
+        <div class="card-body">
+          <form action="/" method="post">
+            {{#if error}}
+            <div class="alert alert-danger">{{error}}</div>
+            {{/if}}
+            {{#if exito}}
+            <div class="alert alert-success">{{exito}}</div>
+            {{/if}}
+            <div class="mb-3">
+              <label for="cuenta" class="form-label">Número de cuenta:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="cuenta"
+                name="cuenta"
+                placeholder="Ingrese su número de cuenta"
+                required="required"
+                value="{{cuenta}}"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="pin" class="form-label">PIN:</label>
+              <input
+                type="password"
+                class="form-control"
+                id="pin"
+                name="pin"
+                placeholder="Ingrese su PIN"
+                required="required"
+                value="{{pin}}"
+              />
+            </div>
+            <button type="submit" class="btn btn-success w-100">Continuar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/Cajero/Cajero.js"></script>
+  </body>
+</html>

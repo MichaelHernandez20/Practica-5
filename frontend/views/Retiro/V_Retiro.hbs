@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>{{title}}</title>
-    <link href="/Assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
   </head>
   <body class="bg-light">
 
@@ -14,34 +14,36 @@
         <div class="card-body">
           <ul class="list-group list-group-flush small">
             <li class="list-group-item d-flex justify-content-between">
-              <span>Fecha:</span><span>01/07/2025</span>
+              <span>Fecha:</span><span>{{fecha}}</span>
             </li>
             <li class="list-group-item d-flex justify-content-between">
-              <span>Hora:</span><span>22:15</span>
+              <span>Hora:</span><span>{{hora}}</span>
             </li>
             <li class="list-group-item d-flex justify-content-between">
-              <span>Cuenta:</span><span>Ahorros</span>
+              <span>Cuenta:</span><span>{{cuenta}}</span>
             </li>
-            <li
-              class="list-group-item border-top d-flex justify-content-between fw-bold"
-            >
-              <span>Billetes de $1000:</span><span>2</span>
+            <li class="list-group-item border-top d-flex justify-content-between fw-bold">
+              <span>Billetes de $1000:</span><span>{{desglose.[1000]}}</span>
             </li>
             <li class="list-group-item d-flex justify-content-between fw-bold">
-              <span>Billetes de $500:</span><span>1</span>
+              <span>Billetes de $500:</span><span>{{desglose.[500]}}</span>
             </li>
             <li class="list-group-item d-flex justify-content-between fw-bold">
-              <span>Billetes de $200:</span><span>0</span>
+              <span>Billetes de $200:</span><span>{{desglose.[200]}}</span>
             </li>
             <li class="list-group-item d-flex justify-content-between fw-bold">
-              <span>Billetes de $100:</span><span>1</span>
+              <span>Billetes de $100:</span><span>{{desglose.[100]}}</span>
             </li>
-            <li
-              class="list-group-item border-top d-flex justify-content-between text-success"
-            >
-              <span>Total retirado:</span><span>$2600</span>
+            <li class="list-group-item border-top d-flex justify-content-between text-success">
+              <span>Total retirado:</span><span>${{total}}</span>
             </li>
           </ul>
+          {{#if exito}}
+          <div class="alert alert-success mt-2">{{exito}}</div>
+          {{/if}}
+          {{#if error}}
+          <div class="alert alert-danger mt-2">{{error}}</div>
+          {{/if}}
           <div class="d-flex justify-content-end">
             <button
               class="btn btn-outline-success"
